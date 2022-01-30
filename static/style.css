@@ -91,16 +91,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: color .1s linear;
 }
 
-.nav__link:after {
-    width: 100%;
-    opacity: 0.7;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    transition: opacity .1s linear;
-}
-
 .nav__link:hover, .nav__link.active {
     opacity: 0.7;
 }
@@ -127,3 +117,18 @@ h1, h2, h3, h4, h5, h6 {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.phone {
+    padding: 50px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: block;
+}
+
+.phone__text {
+    font-size: 40px;
+    color: black;
+}
+.phone__text:hover{
+    opacity: 0.7;
+}
