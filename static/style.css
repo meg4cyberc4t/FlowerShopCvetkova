@@ -1,3 +1,5 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 @font-face {
     font-family: "BadScript";
     src: url("assets/BadScript-Regular.ttf") format("truetype");
@@ -66,15 +68,14 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     position: absolute;
     width: 100%;
-    padding-top: 30px;
-    top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    padding-bottom: 32px;
+    padding-top: 32px;
 }
 
 .header__inner {
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,6 +90,10 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     text-decoration: none;
     transition: color .1s linear;
+}
+
+.nav__link_dark{
+    color: black;
 }
 
 .nav__link:hover, .nav__link.active {
@@ -117,18 +122,44 @@ h1, h2, h3, h4, h5, h6 {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.phone {
-    padding: 50px;
+.additions {
+    padding: 32px;
     align-items: center;
     align-content: center;
     text-align: center;
     display: block;
 }
 
-.phone__text {
+.additions__text {
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-size: 40px;
     color: black;
 }
-.phone__text:hover{
+
+.additions__social{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 36px;
+
+}
+.social {
+    text-align: center;
+    align-content: center;
+    margin: 0px 10px;
+    padding: 18px;
+    color: black;
+}
+.instagram a:hover {background: #3f729b; color: white;}
+.vk a:hover {background: #5d84ae; color: white;}
+.pinterest a:hover {background: #c8232c; color: white;}
+.telegram a:hover {background: #249bd7; color: white;}
+.whatsapp a:hover {background: #50b154; color: white;}
+
+a:hover{
     opacity: 0.7;
 }
