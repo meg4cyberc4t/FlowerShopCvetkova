@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+a:hover{
+    opacity: 0.7;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -49,20 +53,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro__title {
     font-size: 120px;
-    font-weight: 700;
 }
 
 .intro__subtitle {
-    margin-bottom: 20px;
     font-size: 70px;
-}
-
-.intro__title:after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    margin: 60px auto;
 }
 
 .header {
@@ -107,18 +101,20 @@ h1, h2, h3, h4, h5, h6 {
 .delivery__inner {
     color: black;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     align-content: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-.delivery__text {
-    margin-right: 50px;
+.text {
     font-size: 20px;
 }
 
 .delivery__image {
-    float: right;
-    height: 700px;
+    max-width: 400px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -154,12 +150,4 @@ h1, h2, h3, h4, h5, h6 {
     padding: 18px;
     color: black;
 }
-.instagram a:hover {background: #3f729b; color: white;}
-.vk a:hover {background: #5d84ae; color: white;}
-.pinterest a:hover {background: #c8232c; color: white;}
-.telegram a:hover {background: #249bd7; color: white;}
-.whatsapp a:hover {background: #50b154; color: white;}
 
-a:hover{
-    opacity: 0.7;
-}
