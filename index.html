@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Анна Цветкова</title>
     <link href="static/style.css" rel="stylesheet" type="text/css"/>
-    <script src="static/script.js"></script>
 </head>
 <body>
 <header class="header header_up">
     <div class="container">
         <nav class="nav header__inner" style="color: white;">
-            <a class="nav__link" href="#">О нас</a>
-            <a class="nav__link" href="#">Ассортимент</a>
-            <a class="nav__link" href="#">Доставка</a>
+            <a class="nav__link" href="#О нас">О нас</a>
+            <a class="nav__link" href="#Ассортимент">Ассортимент</a>
+            <a class="nav__link" href="#Доставка">Доставка</a>
         </nav>
     </div>
 </header>
@@ -25,71 +24,102 @@
         </div>
     </div>
 </div>
-<div class="block">
+<div class="block" id="О нас">
     <div class="container">
         <div class="block__inner">
-            <div>
-                <h1>Доставка</h1>
-                </br>
-                <h2>
-                    Мы бережно относимся к доставке нашего искусства!
-                    </br>
-                    Доставляем быстро и по адресу!
-                    </br>
-                    </br>
-                    В пределах Москвы - 100 рублей.
-                    </br>
-                    В пределах МКАД - 250 рублей.
-                    </br>
-                    Доставка за МКАД - по договорённости
-                </h2>
-            </div>
-            <img class="block__image" src="static/assets/delivery.png">
-        </div>
-    </div>
-</div>
-<div class="block">
-    <div class="container">
-        <div class="block__inner">
-            <img class="block__image" src="static/assets/whoami.png">
+            <img class="block__image" src="static/assets/Anna.png" alt="Анна Цветкова">
             <div style="max-width: 500px">
                 <h1>О нас</h1>
-                </br>
+                <br>
                 <h1>Анна Цветкова</h1>
-                </br>
+                <br>
                 <h2>
                     Профессиональный флорист.
-                    </br>
+                    <br>
                     10 лет опыта.
-                    </br>
+                    <br>
                     Премия “Самый лучший букет” по версии журнала “Цветокор”.
-                    </br>
+                    <br>
                     Премия “Изячное в простом” по версии журнала “Кульминация”.
                 </h2>
             </div>
         </div>
     </div>
 </div>
+<div class="block" id="Ассортимент">
+    <div class="container">
+        <div class="block__inner assort_layer" id="roses">
+                <script>
+                    const flowers = [
+                        {
+                            title: "Белые розы",
+                            img_link: "static/assets/flowers/white_roses.png"
+                        },
+                        {
+                            title: "Красные розы",
+                            img_link: "static/assets/flowers/red_roses.png"
+                        },
+                        {
+                            title: "Бежевые розы",
+                            img_link: "static/assets/flowers/beige_roses.png"
+                        }
+                    ];
+                    for (let item of flowers){
+                        document.getElementById("roses").innerHTML += `
+                            <div>
+                                <img src=${item.img_link} alt=${item.title}>
+                                <h1>${item.title}</h1>
+                            </div>
+`
+                    }
+                </script>
+        </div>
+    </div>
+</div>
+<div class="block" id="Доставка">
+    <div class="container">
+        <div class="block__inner">
+            <div>
+                <h1>Доставка</h1>
+                <br>
+                <h2>
+                    Мы бережно относимся к доставке нашего искусства!
+                    <br>
+                    Доставляем быстро и по адресу!
+                    <br>
+                    <br>
+                    В пределах Москвы - 100 рублей.
+                    <br>
+                    В пределах МКАД - 250 рублей.
+                    <br>
+                    Доставка за МКАД - по договорённости
+                </h2>
+            </div>
+            <img class="block__image" src="static/assets/delivery.png" alt="Доставка">
+        </div>
+    </div>
+</div>
+
 <div class="additions">
     <div class="container">
-        <a class="additions__text" href="#">Звоните +79150557790</a>
-        </br>
+        <a class="additions__text" href="404.html">Звоните +79150557790</a>
+        <br>
         <div class="additions__social">
-            <h1 class="additions__text" href="#">Мы в соцсетях:</h1>
-            <a href="#" class="social" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
-            <a href="#" class="social" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
-            <a href="#" class="social" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a>
-            <a href="#" class="social" target="_blank"><i class="fa fa-paper-plane fa-2x"></i></a>
-            <a href="#" class="social" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a>
+            <h1 class="additions__text">Мы в соцсетях:</h1>
+            <a href="404.html" class="social" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="404.html" class="social" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+            <a href="404.html" class="social" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a>
+            <a href="404.html" class="social" target="_blank"><i class="fa fa-paper-plane fa-2x"></i></a>
+            <a href="404.html" class="social" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a>
         </div>
     </div>
 </div>
 <header class="header header_down">
     <div class="container">
         <nav class="nav header__inner">
-            <a class="nav__link nav__link_dark" href="#">О нас</a>
-            <a class="nav__link nav__link_dark" href="#">Ассортимент</a>
-            <a class="nav__link nav__link_dark" href="#">Доставка</a>
+            <a class="nav__link nav__link_dark" href="#О нас">О нас</a>
+            <a class="nav__link nav__link_dark" href="#Ассортимент">Ассортимент</a>
+            <a class="nav__link nav__link_dark" href="#Доставка">Доставка</a>
         </nav>
     </div>
 </header>
