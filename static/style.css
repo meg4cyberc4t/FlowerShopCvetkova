@@ -7,6 +7,10 @@
     font-weight: normal;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "BadScript", serif;
     margin: 0;
