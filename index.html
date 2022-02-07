@@ -48,34 +48,26 @@
 </div>
 <div class="block" id="Ассортимент">
     <div class="container">
-        <div class="block__inner assort_layer" id="roses">
-                <script>
-                    const flowers = [
-                        {
-                            title: "Белые розы",
-                            img_link: "static/assets/flowers/white_roses.png"
-                        },
-                        {
-                            title: "Красные розы",
-                            img_link: "static/assets/flowers/red_roses.png"
-                        },
-                        {
-                            title: "Бежевые розы",
-                            img_link: "static/assets/flowers/beige_roses.png"
-                        }
-                    ];
-                    for (let item of flowers){
-                        document.getElementById("roses").innerHTML += `
-                            <div>
-                                <img src=${item.img_link} alt=${item.title}>
-                                <h1>${item.title}</h1>
-                            </div>
-`
-                    }
-                </script>
+        <div class="block__inner assort_layer" id="roses"></div>
+    </div>
+</div>
+
+<div class="block" id="Конструктор">
+    <div class="container">
+        <div class="block__inner">
+            <h1 style="width: 100%">Конструктор</h1>
+            <h4>Просто перетащите!</h4>
+            <table style="width: 100%">
+                <tr>
+                    <td style="width: 50%" id="flowers_list_constructor">
+                    </td>
+                    <td style="width: 50%; height: 200px;" id="bouquet_list"></td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
+
 <div class="block" id="Доставка">
     <div class="container">
         <div class="block__inner">
@@ -124,4 +116,5 @@
     </div>
 </header>
 </body>
+<script type="text/javascript" src="static/script.js"></script>
 </html>
