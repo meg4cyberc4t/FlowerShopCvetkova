@@ -9,7 +9,6 @@
 
 html{
     scroll-behavior: smooth;
-    overflow-anchor: none;
 }
 
 body {
@@ -41,16 +40,16 @@ h1{
 }
 h2{
     margin: 0;
-    font-size: calc(24px + 24 * (100vw / 1280));
+    font-size: calc(28px + 24 * (100vw / 1280));
 }
 
 h3{
     margin: 0;
-    font-size: calc(24px + 12 * (100vw / 1280));
+    font-size: calc(18px + 12 * (100vw / 1280));
 }
 h4{
     margin: 0;
-    font-size: calc(12px + 12 * (100vw / 1280));
+    font-size: calc(14px + 12 * (100vw / 1280));
 }
 
 a{
@@ -80,10 +79,6 @@ a:hover{
     text-align: center;
     color: white;
 }
-
-
-
-
 
 .header {
     align-content: center;
@@ -157,30 +152,26 @@ a:hover{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.assort_layer{
-    overflow: auto;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
+.scroll_assort {
+    flex-direction: row;
+    overflow-x: scroll;
     white-space: nowrap;
 }
 
 .flower_card{
-    width: 300px;
-    height: 400px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.flower_card:hover {
-   background-color: slategray;
+    border-radius: 25px;
+    padding: 5px;
+    display: inline-flex;
 }
 
 .flower_card img{
-    height: 300px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: 400px;
     -webkit-background-size: cover;
     background-size: cover;
+    border-radius: 25px;
 }
 
 button {
@@ -189,6 +180,8 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-size: calc(22px + 6 * (100vw / 1280));
+    border-radius: 15px;
     min-width: 50px;
     font-family: "BadScript", serif;
 }
@@ -226,36 +219,4 @@ button {
 .social i{
     font-size: calc(18px + 12 * (100vw / 1280));
     size: calc(18px + 12 * (100vw / 1280));
-}
-
-.flower_card_of_list{
-    width: 100%;
-    padding: 8px;
-}
-
-.flower_card_of_list__inner{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-    align-content: flex-start;
-    justify-content: flex-start;
-    margin-right: 20px;
-    border: lime solid;
-}
-
-.flower_card_of_list img{
-    border-radius: 15%;
-    height: 100px;
-    width: 100px;
-    margin-right: 40px;
-}
-
-table {
-    background: #0f0;
-}
-
-td {
-    background: #f00;
-    border: lime solid;
 }
