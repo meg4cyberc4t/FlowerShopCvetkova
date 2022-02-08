@@ -12,29 +12,38 @@ html{
 }
 
 body {
-    font-family: "BadScript", serif;
     margin: 0;
-    color: white;
-}
-
-*,
-*:before,
-*:after {
+    font-family: "BadScript", serif;
+    background-color: white;
+    color: black;
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1{
     margin: 0;
+    font-size: calc(48px + 48 * (100vw / 1280));
+}
+h2{
+    margin: 0;
+    font-size: calc(24px + 24 * (100vw / 1280));
 }
 
+h3{
+    margin: 0;
+    font-size: calc(24px + 12 * (100vw / 1280));
+}
+h4{
+    margin: 0;
+    font-size: calc(12px + 12 * (100vw / 1280));
+}
+
+a{
+    margin: 0;
+    font-size: calc(18px + 12 * (100vw / 1280));
+    size: calc(18px + 12 * (100vw / 1280));
+}
 a:hover{
     opacity: 0.7;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .intro {
@@ -53,17 +62,16 @@ a:hover{
     max-width: 880px;
     margin: 0 auto;
     text-align: center;
+    color: white;
 }
 
-.intro__title {
-    font-size: 120px;
-}
 
-.intro__subtitle {
-    font-size: 70px;
-}
+
+
 
 .header {
+    align-content: center;
+    justify-content: center;
     position: absolute;
     width: 100%;
     left: 0;
@@ -75,9 +83,8 @@ a:hover{
 
 .header__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    font-size: 40px;
 }
 
 .nav__link {
@@ -94,46 +101,70 @@ a:hover{
     color: black;
 }
 
-.nav__link:hover, .nav__link.active {
-    opacity: 0.7;
-}
 
-.block {
-    padding: 50px;
-}
-
-.block__inner {
-    color: black;
+.row{
+    gap: 20px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     text-align: center;
     justify-content: center;
-    gap: 20px;
 }
+
+.row-reverse{
+    gap: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.column{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
 
 .block__image {
-    max-width: 400px;
+    max-width: calc(200px + 120 * (100vw / 1280));
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-block_inner h1, block_inner h2 {
-    font-size: 20px;
 }
 
 .assort_layer{
     overflow: auto;
     max-height: 500px;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
 }
 
 .flower_card{
     width: 300px;
-    max-height: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    background-color: slategray;
     justify-content: center;
+}
+.flower_card:hover {
+   background-color: slategray;
+}
+
+.flower_card img{
+    height: 300px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 button {
@@ -142,30 +173,20 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
     min-width: 50px;
     font-family: "BadScript", serif;
 }
 
-.flower_card img{
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-.additions {
-    padding: 32px;
+.block {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     align-items: center;
     align-content: center;
     text-align: center;
     display: block;
-}
-
-.additions__text {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-size: 40px;
     color: black;
+    padding: 48px 12px 48px 12px;
 }
 
 .additions__social{
@@ -183,6 +204,12 @@ button {
     margin: 0 10px;
     padding: 18px;
     color: black;
+    font-size: calc(18px + 12 * (100vw / 1280));
+    size: calc(18px + 12 * (100vw / 1280));
+}
+.social i{
+    font-size: calc(18px + 12 * (100vw / 1280));
+    size: calc(18px + 12 * (100vw / 1280));
 }
 
 .flower_card_of_list{
@@ -198,7 +225,6 @@ button {
     align-content: flex-start;
     justify-content: flex-start;
     margin-right: 20px;
-    /*gap: 20px;*/
     border: lime solid;
 }
 
