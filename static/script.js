@@ -23,6 +23,5 @@ for (let flower of flowers){
             <img src="${flower.img_link}" alt="${flower.title}">
             <h5>${flower.title}</h5>
             <button>Заказать</button>
-        </a>
-    `;
+        </a>`;
 }

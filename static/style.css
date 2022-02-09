@@ -49,9 +49,12 @@ h3{
 }
 h4{
     margin: 0;
-    font-size: calc(14px + 12 * (100vw / 1280));
+    font-size: calc(14px + 8 * (100vw / 1280));
 }
-
+h5{
+    margin: 0;
+    font-size: calc(14px + 4 * (100vw / 1280));
+}
 a{
     margin: 0;
     font-size: calc(18px + 12 * (100vw / 1280));
@@ -114,7 +117,7 @@ a:hover{
 
 
 .row{
-    gap: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -124,8 +127,9 @@ a:hover{
     justify-content: center;
 }
 
+
 .row-reverse{
-    gap: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -136,7 +140,7 @@ a:hover{
 }
 
 .column{
-    gap: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -150,6 +154,9 @@ a:hover{
 .block__image {
     max-width: calc(200px + 120 * (100vw / 1280));
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.block__title{
+    padding-bottom: 20px;
 }
 
 .scroll_assort {
@@ -168,7 +175,7 @@ a:hover{
 
 .flower_card img{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    height: 400px;
+    height: calc(200px + 125 * (100vw / 1280));
     -webkit-background-size: cover;
     background-size: cover;
     border-radius: 25px;
@@ -180,7 +187,7 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: calc(22px + 6 * (100vw / 1280));
+    font-size: calc(16px + 6 * (100vw / 1280));
     border-radius: 15px;
     min-width: 50px;
     font-family: "BadScript", serif;
@@ -219,4 +226,33 @@ button {
 .social i{
     font-size: calc(18px + 12 * (100vw / 1280));
     size: calc(18px + 12 * (100vw / 1280));
+}
+.flower_list_tile{
+    height: 60px;
+    width: 100%;
+    gap: 20px;
+    padding-right: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 16px;
+    display: inline-flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border: solid 2px;
+}
+
+.flower_list_tile img{
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: 60px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-right: 20px;
+}
+
+.flower_list{
+    height: 300px;
+    min-width: 380px;
+    align-content: center;
 }
