@@ -9,7 +9,6 @@
 
 html{
     scroll-behavior: smooth;
-    overflow-anchor: none;
 }
 
 body {
@@ -41,18 +40,21 @@ h1{
 }
 h2{
     margin: 0;
-    font-size: calc(24px + 24 * (100vw / 1280));
+    font-size: calc(28px + 24 * (100vw / 1280));
 }
 
 h3{
     margin: 0;
-    font-size: calc(24px + 12 * (100vw / 1280));
+    font-size: calc(18px + 12 * (100vw / 1280));
 }
 h4{
     margin: 0;
-    font-size: calc(12px + 12 * (100vw / 1280));
+    font-size: calc(14px + 8 * (100vw / 1280));
 }
-
+h5{
+    margin: 0;
+    font-size: calc(14px + 4 * (100vw / 1280));
+}
 a{
     margin: 0;
     font-size: calc(18px + 12 * (100vw / 1280));
@@ -80,10 +82,6 @@ a:hover{
     text-align: center;
     color: white;
 }
-
-
-
-
 
 .header {
     align-content: center;
@@ -119,7 +117,7 @@ a:hover{
 
 
 .row{
-    gap: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -129,8 +127,9 @@ a:hover{
     justify-content: center;
 }
 
+
 .row-reverse{
-    gap: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -141,7 +140,7 @@ a:hover{
 }
 
 .column{
-    gap: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -156,31 +155,30 @@ a:hover{
     max-width: calc(200px + 120 * (100vw / 1280));
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+.block__title{
+    padding-bottom: 20px;
+}
 
-.assort_layer{
-    overflow: auto;
-    max-height: 500px;
-    position: relative;
-    z-index: 1;
+.scroll_assort {
+    flex-direction: row;
+    overflow-x: scroll;
     white-space: nowrap;
 }
 
 .flower_card{
-    width: 300px;
-    height: 400px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.flower_card:hover {
-   background-color: slategray;
+    border-radius: 25px;
+    padding: 5px;
+    display: inline-flex;
 }
 
 .flower_card img{
-    height: 300px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: calc(200px + 125 * (100vw / 1280));
     -webkit-background-size: cover;
     background-size: cover;
+    border-radius: 25px;
 }
 
 button {
@@ -189,6 +187,8 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-size: calc(16px + 6 * (100vw / 1280));
+    border-radius: 15px;
     min-width: 50px;
     font-family: "BadScript", serif;
 }
@@ -227,35 +227,32 @@ button {
     font-size: calc(18px + 12 * (100vw / 1280));
     size: calc(18px + 12 * (100vw / 1280));
 }
-
-.flower_card_of_list{
+.flower_list_tile{
+    height: 60px;
     width: 100%;
-    padding: 8px;
-}
-
-.flower_card_of_list__inner{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    gap: 20px;
+    padding-right: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 16px;
+    display: inline-flex;
     text-align: center;
-    align-content: flex-start;
-    justify-content: flex-start;
-    margin-right: 20px;
-    border: lime solid;
+    align-content: center;
+    align-items: center;
+    border: solid 2px;
 }
 
-.flower_card_of_list img{
-    border-radius: 15%;
-    height: 100px;
-    width: 100px;
-    margin-right: 40px;
+.flower_list_tile img{
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: 60px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-right: 20px;
 }
 
-table {
-    background: #0f0;
-}
-
-td {
-    background: #f00;
-    border: lime solid;
+.flower_list{
+    height: 300px;
+    min-width: 380px;
+    align-content: center;
 }

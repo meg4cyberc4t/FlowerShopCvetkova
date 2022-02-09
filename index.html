@@ -23,7 +23,7 @@
 </div>
 <div class="block" id="О нас">
     <div class="column">
-        <h3>О нас</h3>
+        <h3 class="block__title">О нас</h3>
         <div class="row">
             <div class="column">
                 <img class="block__image" src="static/assets/Anna.png" alt="Анна Цветкова">
@@ -44,9 +44,15 @@
     </div>
 </div>
 
+<div class="block" id="Ассортимент">
+    <h3 class="block__title">Ассортимент</h3>
+    <div class="scroll_assort" id="scroll_assort_list">
+    </div>
+</div>
+
 <div class="block" id="Доставка">
     <div class="column">
-        <h3>Доставка</h3>
+        <h3 class="block__title">Доставка</h3>
         <div class="row-reverse">
             <img class="block__image" src="static/assets/delivery.png" alt="Доставка">
             <h4>
@@ -61,6 +67,25 @@
                 <br>
                 Доставка за МКАД - по договорённости
             </h4>
+        </div>
+    </div>
+</div>
+
+<div class="block" id="Конструктор">
+    <div class="column">
+        <h3 class="block__title">Конструктор</h3>
+        <h5>Соберите свой букет!</h5>
+        <div class="row" style="width: 100%; align-content: space-around; justify-content: space-around;">
+            <div class="column">
+                <h5>Можно выбрать:</h5>
+                <div class="column flower_list" id="flowers_list_tiles">
+                </div>
+            </div>
+            <div class="column">
+                <h5>В вашем букете:</h5>
+                <div class="column flower_list" id="bouquet">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -86,4 +111,5 @@
 </header>
 </body>
 <script type="text/javascript" src="static/script.js"></script>
+<script type="text/javascript" src="static/bouquet.js"></script>
 </html>
