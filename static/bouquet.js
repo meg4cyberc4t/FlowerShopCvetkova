@@ -33,15 +33,16 @@ function renderBouquet() {
     for (let [key, value] of bouquet) {
         bouquet_html += `<a class="flower_list_tile" id="flower_list_tile_${key.id}">
             <img src="${key.img_link}" alt="${key.title}">
-            <h5>${key.title}</h5>
-            <div class="row">
+            <h5 style="width: 100%">${key.title}</h5>
+            <div class="row-min">
                 <button onclick="addFlowerInBouquet(${key.id}); renderBouquet()">+</button>
                 <h5>${value}</h5>
                 <button onclick="removeFlowerOutBouquet(${key.id}); renderBouquet()">-</button>
             </div>
+            
         </a>`;
     }
-    if (bouquet_html.length === 0){
+    if (bouquet_html.length === 0) {
         bouquet_html = "<p>Пока ничего, но выбор слева!</p>";
     } else {
         bouquet_html += "<button style='padding-left: 20px; padding-right: 20px'>Заказать</button>";

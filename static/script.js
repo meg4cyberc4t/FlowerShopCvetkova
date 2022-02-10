@@ -13,7 +13,17 @@ const flowers = [
         id: 2,
         title: "Бежевые розы",
         img_link: "static/assets/flowers/beige_roses.png"
-    }
+    },
+    {
+        id: 3,
+        title: "Бежевые тюльпаны",
+        img_link: "static/assets/flowers/beige_tuples.jpg"
+    },
+    {
+        id: 4,
+        title: "Сиреневые тюльпаны",
+        img_link: "static/assets/flowers/darkblue_tuples.jpg"
+    },
 ];
 
 
