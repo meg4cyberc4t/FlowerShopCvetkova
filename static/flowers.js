@@ -32,7 +32,7 @@ const flowers = [
 
     {
         type: "grass",
-        title: "Голубая душица",
+        title: "Душица",
         link: "assets/flowers/grass/blue.jpg",
         price: 20,
     },
@@ -50,7 +50,7 @@ const flowers = [
     },
     {
         type: "grass",
-        title: "Классическая душица",
+        title: "Тихая душица",
         link: "assets/flowers/grass/oregano.jpg",
         price: 10,
     },
@@ -101,7 +101,7 @@ const flowers = [
     },
     {
         type: "tuples",
-        title: "Тёмноголубые тюльпаны",
+        title: "Голубые тюльпаны",
         link: "assets/flowers/tuples/darkblue.jpg",
         price: 70,
     },

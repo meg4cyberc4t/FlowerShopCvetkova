@@ -147,6 +147,7 @@ a:hover {
 }
 
 .flower_card {
+    width: calc(120px + 75 * (100vw / 1280));;
     flex-direction: column;
     justify-content: center;
     align-content: center;
