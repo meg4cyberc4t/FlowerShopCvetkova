@@ -2,7 +2,7 @@
 let localHTML = "";
 for (let flower of flowers) {
     localHTML += `
-        <a class="flower_card flower_card_mini" id="flower_card_${flower.title.replace(' ', '_')}">
+        <a class="flower_card flower_card_mini" id="flower_card_construct_${flower.title.replace(' ', '_')}">
             <h4>${flower.title}</h4>
             <img src="${"static/" + flower.link}" alt="${flower.title}">
             <hr>
@@ -29,7 +29,7 @@ function updateCost() {
 function updateCard(title) {
     let flower = flowers.find(e => e.title === title);
     let isActive = bouquet.indexOf(title) !== -1;
-    document.querySelector(`#flower_card_${flower.title.replace(' ', '_')}`).innerHTML = `
+    document.querySelector(`#flower_card_construct_${flower.title.replace(' ', '_')}`).innerHTML = `
         <a class="flower_card flower_card_mini" id="flower_card_${flower.title}" style="${isActive ? '' : 'opacity:0.8;'}">
             <h4>${flower.title}</h4>
             <img src="${"static/" + flower.link}" alt="${flower.title}">
