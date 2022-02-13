@@ -22,24 +22,21 @@
     </div>
 </div>
 <div class="block" id="О нас">
-    <div class="column">
+    <div class="block__inner">
         <h3 class="block__title">О нас</h3>
-        <div class="row">
-            <div class="column">
-                <img class="block__image" src="static/assets/Anna.png" alt="Анна Цветкова">
-            </div>
-            <div class="column">
-                <h4>Анна Цветкова</h4>
-                <h4>
-                    Профессиональный флорист.
-                    <br>
-                    10 лет опыта.
-                    <br>
-                    Премия “Самый лучший букет” по версии журнала “Цветокор”.
-                    <br>
-                    Премия “Изячное в простом” по версии журнала “Кульминация”.
-                </h4>
-            </div>
+        <div class="block__content">
+         <img class="block__image" src="static/assets/Anna.png" alt="Анна Цветкова">
+            <h4>
+                Анна Цветкова
+                <br>
+                Профессиональный флорист.
+                <br>
+                10 лет опыта.
+                <br>
+                Премия “Самый лучший букет” по версии журнала “Цветокор”.
+                <br>
+                Премия “Изячное в простом” по версии журнала “Кульминация”.
+            </h4>
         </div>
     </div>
 </div>
@@ -51,9 +48,9 @@
 </div>
 
 <div class="block" id="Доставка">
-    <div class="column">
+    <div class="block__inner">
         <h3 class="block__title">Доставка</h3>
-        <div class="row-reverse">
+        <div class="block__content" style="flex-direction: row-reverse;">
             <img class="block__image" src="static/assets/delivery.png" alt="Доставка">
             <h4>
                 Мы бережно относимся к доставке нашего искусства!
@@ -72,18 +69,18 @@
 </div>
 
 <div class="block" id="Конструктор">
-    <div class="column">
+    <div class=block__inner>
         <h3 class="block__title">Конструктор</h3>
         <h5>Соберите свой букет!</h5>
-        <div class="row" style="justify-content: space-evenly;">
-            <div class="column" style="flex: 1;">
+        <div class="block__content">
+            <div style="flex: 1; min-width: 400px">
                 <h5>Можно выбрать:</h5>
-                <div class="column flower_list" id="flowers_list_tiles">
+                <div class="flower_list" id="flowers_list_tiles">
                 </div>
             </div>
-            <div class="column" style="flex: 1;">
+            <div style="flex: 1; min-width: 400px">
                 <h5>В вашем букете:</h5>
-                <div class="column flower_list" id="bouquet">
+                <div class="flower_list" id="bouquet">
                 </div>
             </div>
         </div>

@@ -7,14 +7,22 @@
     font-weight: normal;
 }
 
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+}
+
 html {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-family: "BadScript", serif;
     background-color: white;
     color: black;
@@ -113,60 +121,12 @@ a:hover {
     position: relative;
     color: white;
     text-decoration: none;
+    text-align: center;
     transition: color .1s linear;
 }
 
 .nav__link_dark {
     color: black;
-}
-
-
-.row {
-    gap: 10px;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.row-min {
-    gap: 10px;
-    display: flex;
-    height: 100%;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-}
-
-
-.row-reverse {
-    gap: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.column {
-    gap: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
 }
 
 
@@ -181,7 +141,7 @@ a:hover {
 
 .scroll_assort {
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
 }
 
@@ -226,6 +186,29 @@ button {
     color: black;
     padding: 48px 12px 48px 12px;
 }
+.block__inner{
+    gap: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.block__content{
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
 
 .additions__social {
     padding-bottom: 32px;
@@ -253,7 +236,10 @@ button {
 }
 
 .flower_list_tile {
-    width: 95%;
+    /*width: 100%;*/
+    /*gap: 0px;*/
+    /*width: max-content;*/
+    width: 80%;
     gap: 20px;
     flex-direction: row;
     justify-content: space-between;
@@ -263,6 +249,18 @@ button {
     text-align: center;
     align-content: center;
     align-items: center;
+    height: 50px;
+}
+
+.flower_list_tile .flower_list_tile_buttons{
+    flex-direction: row;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: end;
+    text-align: center;
+    justify-content: center;
 }
 
 .flower_list_tile button {
@@ -273,14 +271,13 @@ button {
     object-fit: cover;
     border-radius: 15px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    height: 50px;
+    height: 100%;
     width: 50px;
-    padding-right: 20px;
 }
 
 .flower_list {
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
     flex-wrap: nowrap;
     width: 100%;
     align-content: center;
