@@ -24,6 +24,7 @@ function updateCost() {
         cost += flowers.find(e => e.title === flowerTitle.replace('_', ' ')).price;
     }
     document.querySelector("#constructor_cost").innerHTML = cost ? `Итого: ${cost} Рублей` : "";
+    document.querySelector("#constructor_button_place").innerHTML = cost ? `<button style="width: 150px">Заказать</button>` : "";
 }
 
 function updateCard(title) {
