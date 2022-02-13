@@ -1,52 +1,33 @@
-// let flowers_list_tiles_html = "";
-// for (let value of flowers) {
-//     console.log(value);
-//     flowers_list_tiles_html += `<a class="flower_list_tile" id="flower_list_tile_${value.id}">
-//             <img src="${value.img_link}" alt="${value.title}">
-//             <h5>${value.title}</h5>
-//             <button onclick="addFlowerInBouquet(${value.id}); renderBouquet()">+</button>
-//         </a>`;
-// }
-// document.getElementById("flowers_list_tiles").innerHTML += flowers_list_tiles_html;
+// Генерация конструктора цветов
+let bouquet = [];
 
-// let bouquet = new Map();
-//
-// function addFlowerInBouquet(id) {
-//     if (bouquet.has(flowers[id])) {
-//         bouquet.set(flowers[id], bouquet.get(flowers[id]) + 1)
-//     } else {
-//         bouquet.set(flowers[id], 1)
-//     }
-// }
-//
-// function removeFlowerOutBouquet(id) {
-//     if (bouquet.get(flowers[id]) <= 1) {
-//         bouquet.delete(flowers[id]);
-//     } else {
-//         bouquet.set(flowers[id], parseInt(bouquet.get(flowers[id])) - 1)
-//     }
-//     console.log(bouquet);
-// }
-//
-// function renderBouquet() {
-//     let bouquet_html = "";
-//     for (let [key, value] of bouquet) {
-//         bouquet_html += `<a class="flower_list_tile" id="flower_list_tile_${key.id}">
-//             <img src="${key.img_link}" alt="${key.title}">
-//             <h5>${key.title}</h5>
-//             <div class="flower_list_tile_buttons">
-//                 <button onclick="addFlowerInBouquet(${key.id}); renderBouquet()">+</button>
-//                 <h5>${value}</h5>
-//                 <button onclick="removeFlowerOutBouquet(${key.id}); renderBouquet()">-</button>
-//             </div>
-//         </a>`;
-//     }
-//     if (bouquet_html.length === 0) {
-//         bouquet_html = "<p>Пока ничего, но выбор слева!</p>";
-//     } else {
-//         bouquet_html += "<button style='padding-left: 20px; padding-right: 20px'>Заказать</button>";
-//     }
-//     document.getElementById("bouquet").innerHTML = bouquet_html;
-// }
-//
-// renderBouquet();
+function renderConstructor() {
+    let localHTML = "";
+    let cost = 0;
+    for (let flower of flowers) {
+        let isActive = bouquet.indexOf(flower.title) !== -1;
+        if (isActive){
+            cost += flower.price;
+        }
+        localHTML += `
+    <a class="flower_card flower_card_mini" id="flower_card_${flower.title}" style="${isActive ? '' : 'opacity:0.8;'}">
+            <h4>${flower.title}</h4>
+            <img src="${"static/" + flower.link}" alt="${flower.title}">
+            <hr>
+            <button onclick="changeFlowerInBouquet('${flower.title}'); renderConstructor();">${!isActive ? 'Добавить' : 'Убрать'}</button>
+        </a>`;
+    }
+    document.querySelector("#scroll_constructor_list").innerHTML = localHTML;
+    document.querySelector("#constructor_cost").innerHTML = cost ? `Итого: ${cost} Рублей` : "";
+}
+
+renderConstructor();
+
+function changeFlowerInBouquet(title) {
+    if (bouquet.indexOf(title) >= 0) {
+        let index = bouquet.indexOf(title);
+        delete bouquet[index];
+    } else {
+        bouquet.push(title)
+    }
+}

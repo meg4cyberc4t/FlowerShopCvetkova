@@ -150,9 +150,16 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    text-align: center;
+    place-content: center;
+    align-items: center;
     border-radius: 25px;
     padding: 5px;
     display: inline-flex;
+}
+
+.flower_card button{
+    width: 100%;
 }
 
 .flower_card img {
@@ -164,9 +171,13 @@ a:hover {
     background-size: cover;
     border-radius: 25px;
 }
+.flower_card_mini img{
+    height: calc(50px + 75 * (100vw / 1280));
+    width: calc(50px + 75 * (100vw / 1280));
+}
 
 button {
-    border: none;
+    border-color: black;
     color: black;
     text-align: center;
     text-decoration: none;

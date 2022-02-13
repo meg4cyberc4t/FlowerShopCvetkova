@@ -56,7 +56,7 @@ const flowers = [
     },
     {
         type: "grass",
-        title: "Травушка",
+        title: "Зеленая трава",
         link: "assets/flowers/grass/real_grass.jpg",
         price: 10,
     },
@@ -82,13 +82,13 @@ const flowers = [
 
     {
         type: "pions",
-        title: "Нежные розовые",
+        title: "Нежные пионы",
         link: "assets/flowers/pions/dear_pink.jpg",
         price: 100,
     },
     {
         type: "pions",
-        title: "Розовые",
+        title: "Розовые пионы",
         link: "assets/flowers/pions/pink.jpg",
         price: 80,
     },
