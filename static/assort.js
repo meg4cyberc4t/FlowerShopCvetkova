@@ -4,7 +4,7 @@ for (let flower of flowers){
     <a class="flower_card" id="flower_card_${flower.title}">
             <h4>${flower.title}</h4>
             <img src="${"static/" + flower.link}" alt="${flower.title}">
-            <h6>${flower.price}р/шт</h6>
+            <h6>15 шт. - ${flower.price * 10}р</h6>
             <button>Заказать</button>
         </a>`;
 }
