@@ -143,11 +143,13 @@ a:hover {
     flex-direction: row;
     overflow-x: auto;
     white-space: nowrap;
+    padding-left: 20px;
 }
 
 .flower_card {
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     border-radius: 25px;
     padding: 5px;
     display: inline-flex;
@@ -156,8 +158,8 @@ a:hover {
 .flower_card img {
     object-fit: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    height: calc(200px + 125 * (100vw / 1280));
-    width: calc(200px + 125 * (100vw / 1280));
+    height: calc(100px + 75 * (100vw / 1280));
+    width: calc(100px + 75 * (100vw / 1280));
     -webkit-background-size: cover;
     background-size: cover;
     border-radius: 25px;
@@ -184,7 +186,7 @@ button {
     text-align: center;
     display: block;
     color: black;
-    padding: 48px 12px 48px 12px;
+    padding: 48px 0 48px 0;
 }
 .block__inner{
     gap: 10px;
