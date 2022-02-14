@@ -13,18 +13,26 @@ document.querySelector("#scroll_constructor_list").innerHTML = localHTML;
 
 // Генерация конструктора цветов
 let bouquet = [];
+let multipluer = 1;
 
 
 function updateCost() {
     let cost = 0;
+    let count = 0;
     for (let flowerTitle of bouquet) {
         if (flowerTitle === undefined){
             continue;
         }
         cost += flowers.find(e => e.title === flowerTitle.replace('_', ' ')).price;
+        count++;
     }
-    document.querySelector("#constructor_cost").innerHTML = cost ? `Итого: ${cost} Рублей` : "";
+    document.querySelector("#constructor_cost").innerHTML = cost ? `Итого: ${cost*multipluer} Рублей` : "";
     document.querySelector("#constructor_button_place").innerHTML = cost ? `<button style="width: 150px">Заказать</button>` : "";
+    document.querySelector("#constructor_range_place").innerHTML = cost ? `<h5>Количество цветов: ${count*multipluer}</h5><input id="multipluer_range" type="range" min="0" value="${multipluer}" max="10">` : "";
+    document.getElementById("multipluer_range").onchange = function (_) {
+        multipluer = document.getElementById("multipluer_range").value;
+        updateCost();
+    }
 }
 
 function updateCard(title) {
