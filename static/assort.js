@@ -1,5 +1,5 @@
 // Генерация ассортимента
-for (let flower of flowers){
+for (let flower of flowers) {
     document.querySelector("#scroll_assort_list").innerHTML += `
     <a class="flower_card" id="flower_card_${flower.title}">
             <h4>${flower.title}</h4>
