@@ -72,7 +72,11 @@
     <div class=block__inner>
         <h3 class="block__title">Конструктор</h3>
         <div class="search-container">
-            <input id="search_field" type="text" placeholder="Search..." name="search">
+            <form onsubmit="event.preventDefault();" role="search">
+
+                <label for="search">Поиск</label>
+                <input id="search" type="search" placeholder="Поиск..." autofocus required />
+            </form>
         </div>
         <div class="block__content" id="constructor__inner">
             <div class="scroll_assort" id="scroll_constructor_list">

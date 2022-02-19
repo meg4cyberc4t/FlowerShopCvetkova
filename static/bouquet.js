@@ -62,8 +62,8 @@ function updateCost() {
     }
 }
 
-document.getElementById("search_field").oninput = function (e) {
+document.getElementById("search").oninput = function (e) {
     e.preventDefault();
-    search_pattern = document.getElementById("search_field").value.trim().toLowerCase();
+    search_pattern = document.getElementById("search").value.trim().toLowerCase();
     loadingCards();
 }
